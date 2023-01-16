@@ -5,11 +5,13 @@ class WButton extends StatelessWidget {
   final VoidCallback onTap;
   final String title;
   final bool isActiv;
+  final Icon? icons;
   const WButton(
       {super.key,
       required this.onTap,
       required this.title,
-      required this.isActiv});
+      required this.isActiv,
+      this.icons});
 
   @override
   Widget build(BuildContext context) {
@@ -21,13 +23,14 @@ class WButton extends StatelessWidget {
           backgroundColor: isActiv == true ? AppColors.gren : AppColors.grey,
         ),
         onPressed: onTap,
-        child: Text(
-          title,
-          style: const TextStyle(
-            fontSize: 17,
-            fontWeight: FontWeight.w400,
-          ),
-        ),
+        child: icons 
+            ?? Text(
+                title,
+                style: const TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
       ),
     );
   }

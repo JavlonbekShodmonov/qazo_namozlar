@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:qazo_namaz/views/onboarding/onboarding.dart';
+import 'package:qazo_namaz/views/onboarding/onboarding_view.dart';
+
 
 class MySplashView extends StatelessWidget {
   const MySplashView({super.key});
@@ -27,7 +28,7 @@ class MySplashView extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const OnboardingView(),
+                        builder: (context) => const OnboardPage(),
                       ),
                     );
                   },

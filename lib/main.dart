@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:qazo_namaz/views/keraksiz.dart';
+import 'package:qazo_namaz/utils/colors.dart';
+import 'package:qazo_namaz/views/onboarding/onboarding_view.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -14,6 +16,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        appBarTheme:const AppBarTheme(
+          color: AppColors.white,
+          iconTheme: IconThemeData(color: AppColors.blue),
+          elevation: 0.3,
+          titleSpacing: 0,
+        ),
       ),
       home: const OnboardPage(),
     );
